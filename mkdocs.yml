@@ -1,4 +1,62 @@
-site_name: My Docs
-site_url: https://sitename.example
+# Konfiguracja Projektu
+site_name: Git & GitHub - Przewodnik dla Zespołów
+site_author: 'Szymon Ślusarczyk i Kacper Augustyniak'
+site_description: >
+  Kompleksowa instrukcja konfiguracji i pracy z systemem kontroli wersji Git
+  oraz platformą GitHub, stworzona z myślą o efektywnej pracy zespołowej.
+
+# Link do repozytorium (ważne dla punktacji!)
+repo_url: https://github.com/Snozlyy11/test-projekt
+repo_name: test-projekt
+edit_uri: edit/main/docs/
+
+# Wygląd i motyw (celujemy w 20/20 pkt)
 theme:
   name: material
+  language: pl
+  logo: assets/logo-1.png # Przykładowa ścieżka do logo
+  palette:
+    # Paleta kolorów dla trybu jasnego i ciemnego
+    - scheme: default
+      primary: blue
+      accent: light-blue
+      toggle:
+        icon: material/brightness-7
+        name: Przełącz na tryb ciemny
+    - scheme: slate
+      primary: blue
+      accent: light-blue
+      toggle:
+        icon: material/brightness-4
+        name: Przełącz na tryb jasny
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.tabs.link
+
+# Struktura nawigacji (kluczowe dla punktacji!)
+nav:
+  - Strona Główna: index.md
+  - O Projekcie: projekt.md
+  - Autorzy: autorzy.md
+  - Teoria - Kurs Git i GitHub:
+    - Wprowadzenie: teoria/index.md
+    # Tutaj będą dodawane kolejne rozdziały
+  - Przykłady - Warsztat Praktyczny:
+    - Wprowadzenie: przykłady/index.md
+    # Tutaj będą dodawane kolejne scenariusze
+
+# Rozszerzenia dla estetyki (Markdown)
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
